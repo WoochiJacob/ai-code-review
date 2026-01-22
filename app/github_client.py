@@ -10,7 +10,7 @@ REPO: Final[str] = os.getenv("REPO")  # type: ignore
 
 
 if not TOKEN:
-    raise RuntimeError("GITHUB_TOKEN is missing in .env")
+    raise RuntimeError("GITHUB_TOKEN is missing (env or GitHub Actions secret)")
 if not REPO or "/" not in REPO:
     raise RuntimeError("REPO is missing or invalid in .env (format: owner/repo)")
 
