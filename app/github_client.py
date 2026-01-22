@@ -3,7 +3,7 @@ import requests
 from dotenv import load_dotenv
 from typing import Final
 
-load_dotenv()
+load_dotenv(override=False)
 
 TOKEN = os.getenv("GITHUB_TOKEN")
 REPO: Final[str] = os.getenv("REPO")  # type: ignore
